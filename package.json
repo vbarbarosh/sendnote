@@ -2,7 +2,7 @@
     "author": "Vladimir Barbarosh <vladimir.barbarosh@gmail.com>",
     "license": "MIT",
     "name": "@vbarbarosh/sendnote",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "description": "Send quick notes right to an email. Uses GMail as an email gateway.",
     "keywords": [
         "email",
