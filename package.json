@@ -1,0 +1,18 @@
+{
+    "author": "Vladimir Barbarosh <vladimir.barbarosh@gmail.com>",
+    "license": "MIT",
+    "name": "@vbarbarosh/sendnote",
+    "version": "0.0.0",
+    "description": "Send quick notes right to an email. Uses GMail as an email gateway.",
+    "keywords": [
+        "email",
+        "sendnote"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vbarbarosh/sendnote.git"
+    },
+    "bugs": {
+        "url": "https://github.com/vbarbarosh/sendnote/issues"
+    }
+}
