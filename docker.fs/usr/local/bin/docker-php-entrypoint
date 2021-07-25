@@ -1,0 +1,25 @@
+#!/bin/sh
+set -e
+
+if test -z "$GMAIL_EMAIL"; then
+    echo error: GMAIL_EMAIL is not set 2>&1
+    exit 1
+fi
+if test -z "$GMAIL_PASSWORD"; then
+    echo error: GMAIL_PASSWORD is not set 2>&1
+    exit 1
+fi
+
+gawk -i inplace '
+/^user / { $0 = "user \"" ENVIRON["GMAIL_EMAIL"] "\"" }
+/^password / { $0 = "password \"" ENVIRON["GMAIL_PASSWORD"] "\""}
+/^from / { $0 = "from \"" ENVIRON["GMAIL_EMAIL"] "\""}
+{ print }
+' /etc/msmtprc
+
+# first arg is `-f` or `--some-option`
+if [ "${1#-}" != "$1" ]; then
+	set -- apache2-foreground "$@"
+fi
+
+exec "$@"

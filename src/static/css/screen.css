@@ -1,0 +1,18 @@
+body {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.flat,
+.flat:focus {
+	border-radius: 0;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	box-shadow: none;
+}
+
+.container-space-between {
+	display: flex;
+	justify-content: space-between;
+}

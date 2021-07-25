@@ -1,0 +1,9 @@
+version: '3'
+services:
+  sendnote:
+    env_file:
+      - .env
+    build: .
+    ports:
+      - 3000:80
+    restart: always
