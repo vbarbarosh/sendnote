@@ -12,5 +12,9 @@ bin/build
 
 version=`cat package.json | grep version | cut -d\" -f4`
 
+docker build . -t sendnote
+    -t vbarbarosh/sendnote:latest \
+    -t vbarbarosh/sendnote:$version
+
 docker push vbarbarosh/sendnote:latest
 docker push vbarbarosh/sendnote:$version
