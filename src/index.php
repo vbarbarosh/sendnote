@@ -31,7 +31,7 @@ if (isset($_FILES['attachments'])) {
         if ($error == 0) {
             $attachments[] = [
                 'file' => $_FILES['attachments']['tmp_name'][$index],
-                'title' => $_FILES['attachments']['name'][$index],
+                'title' => sprintf('%s_%d-%s', date('Ymd_His'), ($index + 1), $_FILES['attachments']['name'][$index]),
                 'mime' => $_FILES['attachments']['type'][$index],
             ];
         }
